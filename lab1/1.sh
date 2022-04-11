@@ -8,9 +8,9 @@ echo -e "Find file"
 echo -e "============================\n"
 
 
-PROGRUM=true  
+PROGRUM=true
 
-while $PROGRUM; do
+while $PROGRUN; do
     read -p "Enter the directory path: " DIR
 
     if ! [ -d "$DIR" ]; then
@@ -42,6 +42,7 @@ while $PROGRUM; do
         
         echo "FILES: "
         find $DIR -size $FILESIZE 2>error.txt
+        find $DIR -size +$FILESIZE 2>error.txt
         echo -e "\n"
 
     else
@@ -51,3 +52,8 @@ while $PROGRUM; do
 
 
 done
+
+
+
+
+
